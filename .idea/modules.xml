@@ -3,12 +3,15 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Aula3 - Pilha/Aula3 - Pilha.iml" filepath="$PROJECT_DIR$/Aula3 - Pilha/Aula3 - Pilha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula4 - Fila/Aula4 - Fila.iml" filepath="$PROJECT_DIR$/Aula4 - Fila/Aula4 - Fila.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exercicio1/Exercicio1.iml" filepath="$PROJECT_DIR$/Exercicio1/Exercicio1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exercicio2/Exercicio2.iml" filepath="$PROJECT_DIR$/Exercicio2/Exercicio2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exercicio3/Exercicio3.iml" filepath="$PROJECT_DIR$/Exercicio3/Exercicio3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exercicio4/Exercicio4.iml" filepath="$PROJECT_DIR$/Exercicio4/Exercicio4.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exercicio5/Exercicio5.iml" filepath="$PROJECT_DIR$/Exercicio5/Exercicio5.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exercicio6/Exercicio6.iml" filepath="$PROJECT_DIR$/Exercicio6/Exercicio6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula4 - Fila/ExercicioPilha5/ExercicioPilha5.iml" filepath="$PROJECT_DIR$/Aula4 - Fila/ExercicioPilha5/ExercicioPilha5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula4 - Fila/ExerciciosFila/ExerciciosFila.iml" filepath="$PROJECT_DIR$/Aula4 - Fila/ExerciciosFila/ExerciciosFila.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/aulas.iml" filepath="$PROJECT_DIR$/.idea/aulas.iml" />
     </modules>
   </component>

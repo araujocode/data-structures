@@ -1,28 +1,52 @@
-import javax.swing.*;
+import javax.swing.JOptionPane;
 
 public class Exercicio2 {
     public static void main(String[] args) {
-        int tam = Integer.parseInt(JOptionPane.showInputDialog("Digite o tamanho desejado para a pilha"));
-        Pilha p = new Pilha(tam);
-        String placa;
-
-        while (p.topo < tam - 1) {
-            placa = JOptionPane.showInputDialog("Digite uma placa para adicionar a pilha");
-            p.empilhar(placa);
-        }
-        String encontrarPlaca = JOptionPane.showInputDialog("Digite a placa a ser encontrada: ");
-
-        for (String x : p) {
-            if (encontrarPlaca == placa) {
-                JOptionPane.showMessageDialog(null, "O carro está estacionado na rua");
-            }
-        }
-
-        String elementosPilha = "Ordem dos carros que precisam sair:\n";
-        // Loop para desempilhar os elementos e concatenar eles na string
-        while (p.topo >= 0) {
-            int elemento = (int) p.desempilhar(); //Cast de Object para int
-            elementosPilha += elemento + "\n";
-        }
+           Pilha p = new Pilha(8);
+           Pilha pCopy = new Pilha(8);
+           String placa, buscaPlaca;
+           boolean achou=false;
+           do{
+                placa = JOptionPane.showInputDialog(
+                "Informe a placa do carro estacionado:");
+                if(placa.equals("sair")){
+                   break;
+                }
+                else{
+                    p.empilhar(placa);
+                    pCopy.empilhar(placa);
+                }
+           }while(!p.cheia());
+           
+           buscaPlaca=JOptionPane.showInputDialog(
+           "Informe a placa do veículo a ser retirado:");
+           
+           do{
+               placa = pCopy.desempilhar().toString();
+               if(placa.equals(buscaPlaca)){
+                   achou = true;
+               }
+           }while(!pCopy.vazia());
+           
+           if(achou){
+               while(!p.vazia()){
+                    placa = p.desempilhar().toString();
+                    if(!placa.equals(buscaPlaca)){
+                    JOptionPane.showMessageDialog(null,
+                            "O carro com placa " + placa + 
+                                    " deverá ser retirado!");
+                    }
+                    else{
+                        break;
+                    }
+               } 
+           }
+           else{
+               JOptionPane.showMessageDialog(null,
+                       "O carro buscado "
+                       + "não está estacionado na rua!");
+           }
+           
     }
+    
 }
