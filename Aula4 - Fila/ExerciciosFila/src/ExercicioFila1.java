@@ -2,17 +2,26 @@ import javax.swing.JOptionPane;
 
 public class ExercicioFila1 {
     public static void main(String[] args) {
-        int tamanhoFila = Integer.parseInt(JOptionPane.showInputDialog("Informe o tamanho da fila:"));
+        int tamanhoFila = Integer.parseInt(JOptionPane.showInputDialog("Digite o tamanho da fila:"));
         Fila fila = new Fila(tamanhoFila);
 
-        for (int i = 0; i < tamanhoFila; i++) {
-            int numero = Integer.parseInt(JOptionPane.showInputDialog("Informe um número inteiro (digite 0 para sair):"));
-            if (numero == 0) {
-                break;
-            }
-            fila.enfileirar(numero);
-        }
+        JOptionPane.showMessageDialog(null, "Digite os números (Digite 0 para parar):");
 
-        fila.exibeFila();
+        String entrada;
+        int numero;
+        do {
+            entrada = JOptionPane.showInputDialog("Digite um número:");
+            numero = Integer.parseInt(entrada);
+            if (numero != 0) {
+                fila.enfileirar(numero);
+            }
+        } while (numero != 0 && !fila.cheia());
+
+        JOptionPane.showMessageDialog(null, "Elementos da fila na ordem de remoção:");
+
+        while (!fila.vazia()) {
+            JOptionPane.showMessageDialog(null, "Elemento removido: " + fila.desenfileirar());
+        }
     }
 }
+
